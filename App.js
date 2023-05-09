@@ -7,8 +7,7 @@ import { useFonts } from "expo-font";
 
 export default function App() {
   const [loaded] = useFonts({
-    // "Staatliches-Regular": require("./src/assets/fonts/Staatliches-Regular.ttf")
-    "InstrumentSerif-Regular": require("./src/assets/fonts/InstrumentSerif-Regular.ttf"),
+    "Staatliches-Regular": require("./src/assets/fonts/Staatliches-Regular.ttf")
   });
 
   const [userNumber, setUserNumber] = useState();
@@ -40,6 +39,6 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: 'green',
-    fontFamily: "InstrumentSerif-Regular"
+    fontFamily: "Staatliches-Regular"
   }
 });
