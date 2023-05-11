@@ -5,8 +5,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 30,
         color: colors.white,
-        fontWeight: 'bold',
-        fontFamily:  "Staatliches"
     },
     header: {
         backgroundColor: colors.secondary,

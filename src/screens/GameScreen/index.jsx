@@ -4,10 +4,9 @@ import Card from "../../components/Card";
 import styles from "./style";
 import colors from "../../constants/colors";
 
-const GameScreen = () => {
+const GameScreen = ({handleResult}) => {
   const [currentGuess, setCurrentGuess] = useState();
 
-  //Generar un numero random que no sea menor que 1 ni mayor que 99
   useEffect(() => {
     setCurrentGuess(Math.floor(Math.random() * (99 - 1) + 1));
   }, []);
@@ -19,17 +18,16 @@ const GameScreen = () => {
       <Card otherStyles={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => console.log("lower")}
+          onPress={() => handleResult('lower', currentGuess)}
         >
           <Text style={{ color: colors.white }}>Mas Bajo</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => console.log("higher")}
+          onPress={() => handleResult('higher', currentGuess)}
         >
           <Text style={{ color: colors.white }}>Mas Alto</Text>
         </TouchableOpacity>
-        
       </Card>
     </View>
   );
